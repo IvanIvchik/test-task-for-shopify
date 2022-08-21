@@ -1,1 +1,142 @@
-/* Смотри сколько снизу свободного места! Оно идеально подойдёт, чтобы писать твои стили! */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #F6F6F6;
+}
+
+.title,
+.btn-card,
+.tag {
+    text-transform: uppercase;
+}
+
+.description-card,
+.title-card {
+    color: #2f2f2f;
+}
+
+.container {
+    width: 1180px;
+    margin: 0 auto;
+}
+
+.wrapper__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+    font-size: 48px;
+    line-height: 72px;
+    font-weight: 900;
+    margin: 40px 0;
+}
+
+.wrapper__cards {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card {
+    background-color: #ffffff;
+    width: 380px;
+    height: 482px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 45px -4px #0000002E;
+}
+
+.wrapper__image {
+    background-image: url(asset/Image.jpg);
+    height: 213.75px;
+    border-radius: 12px 12px 0 0;
+}
+
+.wrapper__tags {
+    display: flex;
+    padding-top: 16.33px;
+}
+
+.tag {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    padding: 0 16px;
+    border-radius: 8px;
+
+}
+
+.new {
+    background-color: #FDCFF3;
+    margin-left: 16.73px;
+}
+
+.last {
+    background-color: #FFCF56;
+    margin-left: 16.27px;
+}
+
+.wrapper__card-content {
+    padding: 24px;
+    height: 220.25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-card {
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 36px;
+    margin-bottom: 16px;
+}
+
+.description-card {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.btn-card {
+    display: block;
+    margin-top: auto;
+    width: 332px;
+    height: 48px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 25px;
+    text-align: center;
+    border: 2px solid;
+    transition: 0.3s all;
+}
+
+.active-btn {
+    border-color: #42940F;
+    color: #42940F;
+    cursor: pointer;
+    background-color: inherit;
+}
+
+.active-btn:hover {
+    color: #fff;
+    background-color: #42940F;
+}
+
+.active-btn:active {
+    border-color: #1F5200;
+    color: #fff;
+    background-color: #1F5200;
+}
+
+.disabled-btn {
+    border-color: #4E4E4E;
+    color: #fff;
+    background-color: #4E4E4E;
+}
