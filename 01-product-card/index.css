@@ -8,14 +8,14 @@ body {
     background-color: #F6F6F6;
 }
 
-.title,
-.btn-card,
-.tag {
+.product-week__title,
+.product-card__btn-product-card,
+.product-card__tag {
     text-transform: uppercase;
 }
 
-.description-card,
-.title-card {
+.description-product__specification-product,
+.description-product__title-product-card {
     color: #2f2f2f;
 }
 
@@ -24,13 +24,13 @@ body {
     margin: 0 auto;
 }
 
-.wrapper__content {
+.product-week {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.title {
+.product-week__title {
     text-align: center;
     font-size: 48px;
     line-height: 72px;
@@ -38,35 +38,42 @@ body {
     margin: 40px 0;
 }
 
-.wrapper__cards {
+.product-week__wrapper-cards {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-.card {
+.product-card {
     background-color: #ffffff;
     width: 380px;
-    height: 482px;
+    min-height: 482px;
     border-radius: 12px;
     box-shadow: 0px 0px 45px -4px #0000002E;
 }
 
-.wrapper__image {
-    background-image: url(asset/Image.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    height: 213.75px;
+.product-card__image-wrapper {
+    position: relative;
+}
+
+.product-card__image {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
     border-radius: 12px 12px 0 0;
 }
 
-.wrapper__tags {
+.product-card-tags {
     display: flex;
-    padding-top: 16.33px;
+    position: absolute;
+    flex-wrap: wrap;
+    top: 16px;
+    left: 16px;
+    gap: 16px;
 }
 
-.tag {
+.product-card__tag {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -76,37 +83,36 @@ body {
 
 }
 
-.new {
+.product-card__tag-new {
     background-color: #FDCFF3;
-    margin-left: 16.73px;
 }
 
-.last {
+.product-card__tag-last {
     background-color: #FFCF56;
-    margin-left: 16.27px;
 }
 
-.wrapper__card-content {
+.description-product {
+    min-height: 220.25px;;
     padding: 24px;
-    height: 220.25px;
     display: flex;
     flex-direction: column;
 }
 
-.title-card {
+.description-product__title-product-card {
     font-size: 24px;
     font-weight: 900;
     line-height: 36px;
     margin-bottom: 16px;
 }
 
-.description-card {
+.description-product__specification-product {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+    overflow: scroll;
 }
 
-.btn-card {
+.product-card__btn-product-card {
     display: block;
     margin-top: auto;
     width: 100%;
@@ -118,27 +124,28 @@ body {
     text-align: center;
     border: 2px solid;
     transition: 0.3s all;
+    margin: auto auto 0;
 }
 
-.active-btn {
+.btn-product-card_active {
     border-color: #42940F;
     color: #42940F;
     cursor: pointer;
     background-color: inherit;
 }
 
-.active-btn:hover {
+.btn-product-card_active:hover {
     color: #fff;
     background-color: #42940F;
 }
 
-.active-btn:active {
+.btn-product-card_active:active {
     border-color: #1F5200;
     color: #fff;
     background-color: #1F5200;
 }
 
-.disabled-btn {
+.btn-product-card_disabled {
     border-color: #4E4E4E;
     color: #fff;
     background-color: #4E4E4E;
@@ -149,7 +156,7 @@ body {
         width: 100%
     }
 
-    .wrapper__cards {
+    .product-week__wrapper-cards {
         flex-wrap: wrap;
         justify-content: center;
         gap: 35px;
@@ -157,38 +164,27 @@ body {
 }
 
 @media (max-width: 500px) {
-    .title {
+    .product-week__title {
         font-size: 32px;
         line-height: 52px;
         padding: 0 12px;
     }
 
-    .wrapper__cards {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 35px;
-    }
-
-    .card {
-        background-color: #ffffff;
+    .product-card {
         width: 310px;
-        height: 432px;
-        border-radius: 12px;
-        box-shadow: 0px 0px 45px -4px #0000002E;
     }
 
     .wrapper__card-content {
         padding: 12px;
-        height: 194.25px;
+        min-height: 194.25px;
     }
 
-    .title-card {
+    .description-product__title-product-card {
         font-size: 18px;
         margin-bottom: 0;
     }
 
-    .description-card {
+    .description-product__specification-product {
         padding: 12px 2px;
-        overflow: scroll;
     }
 }
